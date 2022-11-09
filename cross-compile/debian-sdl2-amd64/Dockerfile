@@ -1,5 +1,9 @@
 
-FROM tomtzook/cross-compile:debian-base
+FROM tomtzook/cross-compile:debian-base-amd64
+
+
+RUN apt-get install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libglm-dev -y
+
 
 # Build and install SDL2 for windows
 RUN wget -c https://github.com/libsdl-org/SDL/releases/download/release-2.24.2/SDL2-2.24.2.tar.gz -O - | tar -xz && \
