@@ -15,7 +15,7 @@ RUN cd SDL2 && mkdir build && cd build && \
 	make && make install && \
 	cd .. && rm -rf build
 
-# Build and install SDL2 for windows
+# Build and install for windows x86_64
 RUN cd SDL2 && mkdir build && cd build && \
 	PREFIX=/usr/ && \
 	TOOLSET=x86_64-w64-mingw32 && \
@@ -24,7 +24,7 @@ RUN cd SDL2 && mkdir build && cd build && \
 	make && make install && \
 	cd .. && rm -rf build
 
-# Build and install SDL2 for aarch64
+# Build and install for aarch64
 # pulseaudio and alsa disabled due to missing libraries
 RUN cd SDL2 && mkdir build && cd build && \
 	PREFIX=/usr/ && \
@@ -34,7 +34,7 @@ RUN cd SDL2 && mkdir build && cd build && \
 	make && make install && \
 	cd .. && rm -rf build
 
-# Build and install SDL2 for arm gnueabihf
+# Build and install for arm gnueabihf
 # pulseaudio and alsa disabled due to missing libraries
 RUN cd SDL2 && mkdir build && cd build && \
 	PREFIX=/usr/ && \
